@@ -1,230 +1,380 @@
 <!DOCTYPE html>
-<head>  
+<html>
+<head>
+  <title>.NET Notebook</title>
+  <script type="text/javascript">
+      globals = { baseUrl: '.' };
+  </script>
+
+  <script type="text/javascript" src="../../scripts/polyfill.js"></script>
+  <script type="text/javascript" src="../../scripts/helpers.js"></script>
+  <script type="text/javascript" src="../../scripts/dom.js"></script>
+  <script type="text/javascript" src="../../scripts/search.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../../css/layout/notebook1.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/themes/blue.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/content/standard.css" />
+
+  <style type="text/css">
+    table.templates td:first-child {
+      width: 200px;
+    }
+
+    table.templates td:nth-child(2) {
+      width: 190px;
+    }
+  </style>
 </head>
 <body>
-  <p>Here is a list of C# Features</p>
+  <div class="outer-layout">
+    <div class="north-pane">
+      <div class="north-left-pane">
+        <div class="logo-area">
+          <div class="logo">
+            .NET Developer Notebook
+          </div>
+        </div>
+      </div>
+      <div class="north-right-pane">
+        <div class="search-outer-area">
+          <input type="text" id="searchTextBox" placeholder="Search ...">
+        </div>
+      </div>
+    </div>
+    <div class="south-pane">
+      <div class="south-left-pane">
+        <div class="sidebar-area">
+          <section>
+            <a href="../../index.html">Home</a>
+          </section>
+          <section>
+            <h1>C#</h1>
+            <a href="../../pages/csharp/features.html">History &amp; Features</a>
+          </section>
+          <section>
+            <h1>.NET Framework</h1>
+            <a href="pages/css/css-boxmodel.html">Future Stuff Here</a><br>
+          </section>
+          <section>
+            <h1>.NET Core</h1>
+            <a href="pages/js/js-videos.html">Future Stuff Here</a><br>
+          </section>
+          <section>
+            <h1>More</h1>
+            <a href="https://github.com/kevinknowscs/DotNetNotebook" target="_blank">GitHub Source</a>
+          </section>
+        </div>
+      </div>
+      <div class="south-right-pane">
+        <div class="page-area">
+          <div class="page-title-area">
+            <div id="page-title-id" class="page-title">
+              Summary of C# History &amp; Features
+            </div>
+          </div>
+          <div id="page-content-scroller-id" class="page-content-scroller">
+            <div id="page-content-id" class="page-content">
+              <table style="width: 100%;">
+                <colgroup>
+                  <col>
+                  <col span="1" style="background-color: lightblue;">
+                </colgroup>
+                <tr>
+                  <th>Introduced In</th>
+                  <th>Feature Summary</th>
+                  <th>Link</th>
+                </tr>
+                <tr>
+                  <th colspan="3" style="background-color: lightgray; text-align: left;">C# 3.0 Features</th>
+                </tr>
+                <tr>
+                  <td>3.0</td>
+                  <td>Auto Implemented Properties</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>3.0</td>
+                  <td>Anonymous Types</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/anonymous-types" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>3.0</td>
+                  <td>Query Expressions</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/linq/query-expression-basics" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>3.0</td>
+                  <td>Lambda Expressions</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/lambda-expressions" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>3.0</td>
+                  <td>Expression Trees</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/expression-trees" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>3.0</td>
+                  <td>Implicitly Types Local Variables</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/var" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>3.0</td>
+                  <td>Partial Methods</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/partial-method" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>3.0</td>
+                  <td>Object and Collection Initializers</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <th colspan="3" style="background-color: lightgray; text-align: left;">C# 4.0 Features</th>
+                </tr>
+                <tr>
+                  <td>4.0</td>
+                  <td>Dynamically Typed Variables</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/dynamic" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>4.0</td>
+                  <td>Named and Optional Arguments</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>4.0</td>
+                  <td>Covariance and Contravariance in Generics</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/standard/generics/covariance-and-contravariance" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>4.0</td>
+                  <td>Embedded Interop Types</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/framework/interop/type-equivalence-and-embedded-interop-types" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <th colspan="3" style="background-color: lightgray; text-align: left;">C# 5.0 Features</th>
+                </tr>
+                <tr>
+                  <td>5.0</td>
+                  <td>Asynchronous Members</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/async" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>5.0</td>
+                  <td>Caller Info Attributes</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/caller-information" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <th colspan="3" style="background-color: lightgray; text-align: left;">C# 6.0 Features</th>
+                </tr>
+                <tr>
+                  <td>6.0</td>
+                  <td>Read-Only Auto-properties</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#read-only-auto-properties" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>6.0</td>
+                  <td>Auto-Property Initializers</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#auto-property-initializers" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>6.0</td>
+                  <td>Expression-Bodied Function Members</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#expression-bodied-function-members" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>6.0</td>
+                  <td>using static</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#using-static" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>6.0</td>
+                  <td>Null-Conditional Operators</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#null-conditional-operators" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>6.0</td>
+                  <td>String Interpolation</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#string-interpolation" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>6.0</td>
+                  <td>Exception Filters</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#exception-filters" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>6.0</td>
+                  <td>nameof Expressions</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#nameof-expressions" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>6.0</td>
+                  <td>await in catch and finally blocks</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#await-in-catch-and-finally-blocks" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>6.0</td>
+                  <td>Index Initializers</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#index-initializers" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>6.0</td>
+                  <td>Use Add() Extension Method in Collection Initializers</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#extension-add-methods-in-collection-initializers" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>6.0</td>
+                  <td>Improved Overload Resolution in Lambda Expressions</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#improved-overload-resolution" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>6.0</td>
+                  <td>Deterministic Compiler Output Option</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#deterministic-compiler-output" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <th colspan="3" style="background-color: lightgray; text-align: left;">C# 7.0 Features</th>
+                </tr>
+                <tr>
+                  <td>7.0</td>
+                  <td>Inline Declaration of out Variables</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#out-variables" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.0</td>
+                  <td>Tuples</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#tuples" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.0</td>
+                  <td>Discards</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#discards" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.0</td>
+                  <td>Pattern Matching in is Expressions and switch Statements</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#pattern-matching" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.0</td>
+                  <td>Reference Variables in Locals and Returns</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#ref-locals-and-returns" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.0</td>
+                  <td>Local Functions</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#local-functions" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.0</td>
+                  <td>Expression-Bodied Contructors, Finalizers, and Accessors</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#more-expression-bodied-members" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.0</td>
+                  <td>Throw Expressions</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#throw-expressions" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.0</td>
+                  <td>Generalized Return Types for Async Methods</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#generalized-async-return-types" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.0</td>
+                  <td>Binary Numeric Literals</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#numeric-literal-syntax-improvements" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.0</td>
+                  <td>Digit Separators in Numeric Literals</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#numeric-literal-syntax-improvements" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <th colspan="3" style="background-color: lightgray; text-align: left;">C# 7.1 Features</th>
+                </tr>
+                <tr>
+                  <td>7.1</td>
+                  <td>Asynchronous Main Methods</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-1#async-main" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.1</td>
+                  <td>Default Literal Expressions</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-1#default-literal-expressions" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.1</td>
+                  <td>Inferred Tuple Element Names</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-1#inferred-tuple-element-names" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.1</td>
+                  <td>Reference Assembly Generation</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-1#reference-assembly-generation" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <th colspan="3" style="background-color: lightgray; text-align: left;">C# 7.2 Features</th>
+                </tr>
+                <tr>
+                  <td>7.2</td>
+                  <td>Reference Semantics with Value Types</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/reference-semantics-with-value-types" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.2</td>
+                  <td>Non-Trailing Named Arguments</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.2</td>
+                  <td>Leading Underscores in Numeric Literals</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-2#leading-underscores-in-numeric-literals" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.2</td>
+                  <td>private protected Access Modifier</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/access-modifiers" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <th colspan="3" style="background-color: lightgray; text-align: left;">C# 7.3 Features</th>
+                </tr>
+                <tr>
+                  <td>7.3</td>
+                  <td>More Performant Safe Code</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-3#enabling-more-performant-safe-code" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.3</td>
+                  <td>Equality and Inequality Tests in Tuples</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/tuples#equality-and-tuples" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.3</td>
+                  <td>Extended Expression Variables in Initializers</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-3#make-existing-features-better" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.3</td>
+                  <td>More Improvements to Overload Candidates</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-3#make-existing-features-better" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.3</td>
+                  <td>Compiler Option to Sign an Assembly Using a Public Key</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/publicsign-compiler-option" target="_blank">MS Docs</a></td>
+                </tr>
+                <tr>
+                  <td>7.3</td>
+                  <td>Mapped Source Paths Compiler Option</td>
+                  <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/pathmap-compiler-option" target="_blank">MS Docs</a></td>
+                </tr>
+              </table>
 
-  <table>
-    <colgroup>
-      <col>
-      <col span="1" style="background-color: lightblue;">
-    </colgroup>
-    <tr>
-      <th>Introduced In</th>
-      <th>Feature Summary</th>
-      <th>Link</th>
-    </tr>
-    <tr>
-      <th colspan="3" style="background-color: lightgray; text-align: left;">C# 3.0 Features</th>
-    </tr>
-    <tr>
-      <td>3.0</td>
-      <td>Auto Implemented Properties</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>3.0</td>
-      <td>Anonymous Types</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/anonymous-types" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>3.0</td>
-      <td>Query Expressions</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/linq/query-expression-basics" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>3.0</td>
-      <td>Lambda Expressions</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/lambda-expressions" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>3.0</td>
-      <td>Expression Trees</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/expression-trees" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>3.0</td>
-      <td>Implicitly Types Local Variables</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/var" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>3.0</td>
-      <td>Partial Methods</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/partial-method" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>3.0</td>
-      <td>Object and Collection Initializers</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <th colspan="3" style="background-color: lightgray; text-align: left;">C# 4.0 Features</th>
-    </tr>
-    <tr>
-      <td>4.0</td>
-      <td>Dynamically Typed Variables</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/dynamic" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>4.0</td>
-      <td>Named and Optional Arguments</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>4.0</td>
-      <td>Covariance and Contravariance in Generics</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/standard/generics/covariance-and-contravariance" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>4.0</td>
-      <td>Embedded Interop Types</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/framework/interop/type-equivalence-and-embedded-interop-types" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <th colspan="3" style="background-color: lightgray; text-align: left;">C# 5.0 Features</th>
-    </tr>
-    <tr>
-      <td>5.0</td>
-      <td>Asynchronous Members</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/async" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>5.0</td>
-      <td>Caller Info Attributes</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/caller-information" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <th colspan="3" style="background-color: lightgray; text-align: left;">C# 6.0 Features</th>
-    </tr>
-    <tr>
-      <td>6.0</td>
-      <td>Read-Only Auto-properties</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#read-only-auto-properties" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>6.0</td>
-      <td>Auto-Property Initializers</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#auto-property-initializers" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>6.0</td>
-      <td>Expression-Bodied Function Members</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#expression-bodied-function-members" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>6.0</td>
-      <td>using static</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#using-static" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>6.0</td>
-      <td>Null-Conditional Operators</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#null-conditional-operators" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>6.0</td>
-      <td>String Interpolation</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#string-interpolation" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>6.0</td>
-      <td>Exception Filters</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#exception-filters" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>6.0</td>
-      <td>nameof Expressions</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#nameof-expressions" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>6.0</td>
-      <td>await in catch and finally blocks</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#await-in-catch-and-finally-blocks" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>6.0</td>
-      <td>Index Initializers</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#index-initializers" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>6.0</td>
-      <td>Use Add() Extension Method in Collection Initializers</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#extension-add-methods-in-collection-initializers" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>6.0</td>
-      <td>Improved Overload Resolution in Lambda Expressions</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#improved-overload-resolution" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>6.0</td>
-      <td>Deterministic Compiler Output Option</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-6#deterministic-compiler-output" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <th colspan="3" style="background-color: lightgray; text-align: left;">C# 7.0 Features</th>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td>Inline Declaration of out Variables</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#out-variables" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td>Tuples</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#tuples" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td>Discards</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#discards" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td>Pattern Matching in is Expressions and switch Statements</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#pattern-matching" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td>Reference Variables in Locals and Returns</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#ref-locals-and-returns" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td>Local Functions</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#local-functions" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td>Expression-Bodied Contructors, Finalizers, and Accessors</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#more-expression-bodied-members" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td>Throw Expressions</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#throw-expressions" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td>Generalized Return Types for Async Methods</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#generalized-async-return-types" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td>Binary Numeric Literals</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#numeric-literal-syntax-improvements" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td>Digit Separators in Numeric Literals</td>
-      <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#numeric-literal-syntax-improvements" target="_blank">MS Docs</a></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td><a href="" target="_blank">MS Docs</a></td>
-    </tr>
-
-
-  </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+</html>
