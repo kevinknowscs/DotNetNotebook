@@ -58,12 +58,40 @@
       ]
     },
     {
+      "label": "Other Notebooks",
+      "items": [
+        {
+          "label": "Web Developer",
+          "href": "https://kevinknowscs.github.io/VanillaJS-Demos"
+        },
+        {
+          "label": "DevOps",
+          "href": "https://kevinknowscs.github.io/DevOpsNotebook"
+        },
+        {
+          "label": "Software Architecture",
+          "href": "https://kevinknowscs.github.io/ArchitectNotebook"
+        }
+      ]
+    },
+    {
       "label": "More",
       "items": [
         {
+          "label": "About Me",
+          "href": "pages/more/aboutme.html"
+        },
+        {
+          "label": "More Learning Content",
+          "href": "pages/more/morecontent.html"
+        },
+        {
+          "separator": true
+        },
+        {
           "label": "GitHub Source",
           "href": "https://github.com/kevinknowscs/DotNetNotebook",
-          "target":  "_blank"
+          "target": "_blank"
         }
       ]
     }

@@ -19,6 +19,11 @@ onDocumentReady(function () {
       }
 
       sectionData.items.forEach(function (itemData) {
+        if (itemData.separator) {
+          sectionEl.appendChild(document.createElement('br'));
+          return;
+        }
+
         anchorEl = document.createElement('a');
         anchorEl.href = itemData.href.startsWith('http') ? itemData.href : globals.baseUrl + '/' + itemData.href;
         anchorEl.target = itemData.target || '_self';
