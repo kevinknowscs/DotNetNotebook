@@ -38,6 +38,26 @@
       ]
     },
     {
+      "label": "Quick Links",
+      "items": [
+        {
+          "label": "Microsoft .NET Guide",
+          "href": "https://docs.microsoft.com/en-us/dotnet/standard/",
+          "target": "_blank"
+        },
+        {
+          "label": "Microsoft .NET Core Guide",
+          "href": "https://docs.microsoft.com/en-us/dotnet/core/",
+          "target": "_blank"
+        },
+        {
+          "label": "Microsoft C# Guide",
+          "href": "https://docs.microsoft.com/en-us/dotnet/csharp/",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
       "label": "More",
       "items": [
         {

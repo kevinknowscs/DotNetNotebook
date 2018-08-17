@@ -25,6 +25,7 @@ onDocumentReady(function () {
         anchorEl.appendChild(document.createTextNode(itemData.label));
 
         sectionEl.appendChild(anchorEl);
+        sectionEl.appendChild(document.createElement('br'));
       });
 
       navRootEl.appendChild(sectionEl);
