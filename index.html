@@ -1,104 +1,86 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>.NET Notebook</title>
-    <script type="text/javascript">
-      globals = { baseUrl: '.' };
-    </script>
+<head>
+  <title>.NET Notebook</title>
+  <script type="text/javascript">
+    globals = { baseUrl: '.' };
+  </script>
 
-    <script type="text/javascript" src="scripts/polyfill.js"></script>
-    <script type="text/javascript" src="scripts/helpers.js"></script>
-    <script type="text/javascript" src="scripts/dom.js"></script>
-    <script type="text/javascript" src="scripts/search.js"></script>
+  <script type="text/javascript" src="scripts/polyfill.js"></script>
+  <script type="text/javascript" src="scripts/helpers.js"></script>
+  <script type="text/javascript" src="scripts/dom.js"></script>
+  <script type="text/javascript" src="scripts/search.js"></script>
+  <script type="text/javascript" src="scripts/toc.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/layout/notebook1.css" />
-    <link rel="stylesheet" type="text/css" href="css/themes/blue.css" />
-    <link rel="stylesheet" type="text/css" href="css/content/standard.css" />
+  <link rel="stylesheet" type="text/css" href="css/layout/notebook1.css" />
+  <link rel="stylesheet" type="text/css" href="css/themes/blue.css" />
+  <link rel="stylesheet" type="text/css" href="css/content/standard.css" />
 
-    <style type="text/css">
-      table.templates td:first-child {
-        width: 200px;
-      }
+  <style type="text/css">
+    table.templates td:first-child {
+      width: 200px;
+    }
 
-      table.templates td:nth-child(2) {
-        width: 190px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="outer-layout">
-      <div class="north-pane">
-        <div class="north-left-pane">
-          <div class="logo-area">
-            <div class="logo">
-              .NET Developer Notebook
-            </div>
-          </div>
-        </div>
-        <div class="north-right-pane">
-          <div class="search-outer-area">
-              <input type="text" id="searchTextBox" placeholder="Search ...">
+    table.templates td:nth-child(2) {
+      width: 190px;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer-layout">
+    <div class="north-pane">
+      <div class="north-left-pane">
+        <div class="logo-area">
+          <div class="logo">
+            .NET Developer Notebook
           </div>
         </div>
       </div>
-      <div class="south-pane">
-        <div class="south-left-pane">
-          <div class="sidebar-area">
-            <section>
-              <a href="index.html">Home</a>
-            </section>
-            <section>
-              <h1>C#</h1>
-              <a href="pages/csharp/features.html">History &amp; Features</a>
-            </section>
-            <section>
-              <h1>.NET Framework</h1>
-              <a href="pages/css/css-boxmodel.html">Future Stuff Here</a><br>
-            </section>
-            <section>
-              <h1>.NET Core</h1>
-              <a href="pages/js/js-videos.html">Future Stuff Here</a><br>
-            </section>
-            <section>
-              <h1>More</h1>
-              <a href="https://github.com/kevinknowscs/DotNetNotebook" target="_blank">GitHub Source</a>
-            </section>
-          </div>
+      <div class="north-right-pane">
+        <div class="search-outer-area">
+          <input type="text" id="searchTextBox" placeholder="Search ...">
         </div>
-        <div class="south-right-pane">
-          <div class="page-area">
-            <div class="page-title-area">
-              <div id="page-title-id" class="page-title">
-                Home Page
-              </div>
+      </div>
+    </div>
+    <div class="south-pane">
+      <div class="south-left-pane">
+        <div class="sidebar-area">
+        </div>
+      </div>
+      <div class="south-right-pane">
+        <div class="page-area">
+          <div class="page-title-area">
+            <div id="page-title-id" class="page-title">
+              Home Page
             </div>
-            <div id="page-content-scroller-id" class="page-content-scroller">
-              <div id="page-content-id" class="page-content">
-                <section>
-                  <details open>
-                    <summary>Articles &amp; Quick Reference Lists</summary>
-                    <table class="common articles" style="width: 100%;">
-                      <tr>
-                        <th>Link</th>
-                        <th>Description</th>
-                      </tr>
-                      <tr class="category">
-                        <td colspan="3">C#</td>
-                      </tr>
-                      <tr>
-                        <td><a href="pages/csharp/features.html">History &amp; Features</a></td>
-                        <td>
-                          Provides a list of new C# features by version number.
-                        </td>
-                      </tr>
-                    </table>
-                  </details>
-                </section>
-              </div>
+          </div>
+          <div id="page-content-scroller-id" class="page-content-scroller">
+            <div id="page-content-id" class="page-content">
+              <section>
+                <details open>
+                  <summary>Articles &amp; Quick Reference Lists</summary>
+                  <table class="common articles" style="width: 100%;">
+                    <tr>
+                      <th>Link</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr class="category">
+                      <td colspan="3">C#</td>
+                    </tr>
+                    <tr>
+                      <td><a href="pages/csharp/features.html">History &amp; Features</a></td>
+                      <td>
+                        Provides a list of new C# features by version number.
+                      </td>
+                    </tr>
+                  </table>
+                </details>
+              </section>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>

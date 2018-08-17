@@ -1,0 +1,51 @@
+{
+  "sections": [
+    {
+      "items": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        }
+      ]
+    },
+    {
+      "label": "C#",
+      "items": [
+        {
+          "label": "History & Features",
+          "href": "pages/csharp/features.html"
+        }
+      ]
+    },
+    {
+      "label": ".NET Framework",
+      "hide":  true,
+      "items": [
+        {
+          "label": "Future Stuff Here",
+          "href": "index.html"
+        }
+      ]
+    },
+    {
+      "label": ".NET Core",
+      "hide": true,
+      "items": [
+        {
+          "label": "Future Stuff Here",
+          "href": "index.html"
+        }
+      ]
+    },
+    {
+      "label": "More",
+      "items": [
+        {
+          "label": "GitHub Source",
+          "href": "https://github.com/kevinknowscs/DotNetNotebook",
+          "target":  "_blank"
+        }
+      ]
+    }
+  ]
+}
