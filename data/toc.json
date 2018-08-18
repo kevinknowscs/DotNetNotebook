@@ -19,11 +19,10 @@
     },
     {
       "label": ".NET Framework",
-      "hide":  true,
       "items": [
         {
-          "label": "Future Stuff Here",
-          "href": "index.html"
+          "label": "NuGet Packages",
+          "href": "pages/dotnet/nuget.html"
         }
       ]
     },

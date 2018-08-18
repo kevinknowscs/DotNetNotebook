@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>.NET Notebook</title>
+  <script type="text/javascript">
+    globals = { baseUrl: '../..' };
+  </script>
+
+  <script type="text/javascript" src="../../scripts/polyfill.js"></script>
+  <script type="text/javascript" src="../../scripts/helpers.js"></script>
+  <script type="text/javascript" src="../../scripts/dom.js"></script>
+  <script type="text/javascript" src="../../scripts/search.js"></script>
+  <script type="text/javascript" src="../../scripts/toc.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../../css/layout/notebook1.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/themes/blue.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/content/standard.css" />
+
+  <style type="text/css">
+    table.templates td:first-child {
+      width: 200px;
+    }
+
+    table.templates td:nth-child(2) {
+      width: 190px;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer-layout">
+    <div class="north-pane">
+      <div class="north-left-pane">
+        <div class="logo-area">
+          <div class="logo">
+            .NET Developer Notebook
+          </div>
+        </div>
+      </div>
+      <div class="north-right-pane">
+        <div class="search-outer-area">
+          <input type="text" id="searchTextBox" placeholder="Search ...">
+        </div>
+      </div>
+    </div>
+    <div class="south-pane">
+      <div class="south-left-pane">
+        <div class="sidebar-area">
+        </div>
+      </div>
+      <div class="south-right-pane">
+        <div class="page-area">
+          <div class="page-title-area">
+            <div id="page-title-id" class="page-title">
+              Popular NuGet Packages
+            </div>
+          </div>
+          <div id="page-content-scroller-id" class="page-content-scroller">
+            <div id="page-content-id" class="page-content">
+              <table class="common articles" style="width: 100%;">
+                <tr>
+                  <th>Package Name</th>
+                  <th>Description</th>
+                </tr>
+                <tr class="category">
+                  <td colspan="2" style="text-align: left;">Popular Database-Related Packages</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/EntityFramework/" target="_blank">EntityFramework</a></td>
+                  <td>Entity Framework is Microsoft's recommended data access technology for new applications.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/MySql.Data/" target="_blank">MySql.Data</a></td>
+                  <td>A client access library for MySQL</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/Dapper/" target="_blank">Dapper</a></td>
+                  <td>A high-performance Micro-ORM supporting SQL Server, MySQL, Squlite, SlqCE, Firebird, and more.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/Respawn/" target="_blank">Respawn</a></td>
+                  <td>Intelligent checkpoints for database tests</td>
+                </tr>
+                <tr class="category">
+                  <td colspan="2" style="text-align: left;">Popular Web UI Packages</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/bootstrap/" target="_blank">Bootstrap</a></td>
+                  <td>The most popular front-end framework for developing responsive, mobile first projects on the web.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/jQuery/" target="_blank">jQuery</a></td>
+                  <td>A concise JavaScript library that simplifies HTML document traversal, event handling, and much more.</td>
+                </tr>
+                <tr class="category">
+                  <td colspan="2" style="text-align: left;">Text/Parsing Utilities</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/Newtonsoft.Json/" target="_blank">Newtonsoft.Json</a></td>
+                  <td>A popular high-performance JSON framework for .NET</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/HtmlAgilityPack/" target="_blank">HtmlAgilityPack</a></td>
+                  <td>
+                    This is an agile HTML parser that builds a read/write DOM and supports plain XPATH or XSLT. It is a .NET code
+                    library that allows you to parse "out of the web" HTML files.
+                  </td>
+                </tr>
+                <tr class="category">
+                  <td colspan="2" style="text-align: left;">Testing Tools</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/NUnit/" target="_blank">NUnit</a></td>
+                  <td>
+                    NUnit features a fluent assert syntax, parameterized, generic and theory tests and is user-extensible.
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/Selenium.WebDriver/" target="_blank">Selenium.WebDriver</a></td>
+                  <td>
+                    Selenium is a set of different software tools each with a different approach to supporting browser automation.
+                  </td>
+                </tr>
+                <tr class="category">
+                  <td colspan="2" style="text-align: left;">Logging</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/NLog/" target="_blank">NLog</a></td>
+                  <td>
+                    NLog is a logging platform for .NET with rich log routing and management capabilities. NLog supports traditional logging,
+                    structured logging and the combination of both.
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/log4net/" target="_blank">Apache log4net</a></td>
+                  <td>
+                    log4net is a tool to help the programmer output log statements to a variety of output targets.
+                  </td>
+                </tr>
+                <tr class="category">
+                  <td colspan="2" style="text-align: left;">Design Pattern Libraries</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/AutoMapper/" target="_blank">AutoMapper</a></td>
+                  <td>A convention-based object-object mapper.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/MediatR/" target="_blank">MediatR</a></td>
+                  <td>Simple, unambitious mediator implementation in .NET</td>
+                </tr>
+                <tr class="category">
+                  <td colspan="2" style="text-align: left;">Communication Libraries</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/Microsoft.AspNet.SignalR/" target="_blank">Microsoft.AspNet.SignalR</a></td>
+                  <td>
+                    Incredibly simple real-time web for .NET. This package pulls in the server components and JavaScript
+                    client required to use SignalR in an ASP.NET application.
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/Microsoft.AspNet.SignalR.Client/" target="_blank">Microsoft.AspNet.SignalR.Client</a></td>
+                  <td>.NET client for ASP.NET SignalR.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/Microsoft.AspNet.SignalR.JS/" target="_blank">Microsoft.AspNet.SignalR.JS</a></td>
+                  <td>JavaScript client for ASP.NET SignalR.</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.nuget.org/packages/SSH.NET/" target="_blank">SSH.NET</a></td>
+                  <td>
+                    SSH.NET is a Secure Shell (SSH) library for .NET, optimized for parallelism and with broad framework support.
+                  </td>
+                </tr>
+
+                <!--
+                <tr>
+                  <td><a href="" target="_blank">PackageNameHere</a></td>
+                  <td></td>
+                </tr>
+                -->
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
