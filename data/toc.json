@@ -21,7 +21,7 @@
       "label": ".NET Framework",
       "items": [
         {
-          "label": "NuGet Packages",
+          "label": "NuGet Popular Packages",
           "href": "pages/dotnet/nuget.html"
         }
       ]
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "label": "Quick Links",
+      "label": "External Links",
       "items": [
         {
           "label": "Microsoft .NET Guide",
@@ -50,8 +50,26 @@
           "target": "_blank"
         },
         {
+          "label": "Microsoft ASP.NET Core",
+          "href": "https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-2.1",
+          "target": "_blank"
+        },
+        {
           "label": "Microsoft C# Guide",
           "href": "https://docs.microsoft.com/en-us/dotnet/csharp/",
+          "target": "_blank"
+        },
+        {
+          "separator": true
+        },
+        {
+          "label": "NuGet Home Page",
+          "href": "https://www.nuget.org/",
+          "target": "_blank"
+        },
+        {
+          "label": "NuGet Documentation",
+          "href": "https://docs.microsoft.com/en-us/nuget/what-is-nuget",
           "target": "_blank"
         }
       ]
